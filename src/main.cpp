@@ -37,6 +37,7 @@ void loop() //loop() gets called about 40,000 times a second?
         sensors.requestTemperatures(); // Send the command to get temperature readings
         Serial.println("DONE");
         Serial.print("Temperature is: ");
+        Serial.println(sensors.getTempCByIndex(0)); // 0 refers to the first IC on the wire
         toggleBuiltin();
     }
 }
